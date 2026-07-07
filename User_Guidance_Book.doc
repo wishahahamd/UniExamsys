@@ -1,0 +1,352 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<title>ExamSys User Guideline Book</title>
+<style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; padding: 40px; color: #1e293b; }
+    h1 { text-align: center; font-size: 26pt; margin-top: 50px; margin-bottom: 10px; font-weight: bold; color: #4f46e5; text-transform: uppercase; letter-spacing: 1px; }
+    h2 { text-align: center; font-size: 16pt; font-weight: normal; margin-top: 5px; margin-bottom: 40px; color: #64748b; }
+    h3 { font-size: 15pt; color: #4f46e5; margin-top: 30px; margin-bottom: 10px; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; font-weight: bold; }
+    h4 { font-size: 12pt; color: #0f172a; margin-top: 20px; margin-bottom: 5px; font-weight: bold; }
+    p { font-size: 11pt; text-align: justify; margin-bottom: 15px; color: #334155; }
+    ul, ol { margin-bottom: 15px; padding-left: 20px; }
+    li { font-size: 11pt; margin-bottom: 6px; color: #334155; }
+    strong { color: #0f172a; }
+    .meta-box { border: 2px double #cbd5e1; padding: 30px; margin: 50px auto; background-color: #f8fafc; border-radius: 10px; width: 80%; }
+    .meta-item { font-size: 13pt; margin-bottom: 10px; font-weight: bold; text-align: center; color: #1e293b; }
+    .center-section { text-align: center; }
+    .alert-box { border-left: 4px solid #f59e0b; background-color: #fef3c7; padding: 15px; margin: 20px 0; border-radius: 4px; }
+    .alert-title { font-weight: bold; color: #b45309; margin-bottom: 5px; }
+    .alert-content { font-size: 10.5pt; color: #78350f; }
+    .table-container { margin: 20px 0; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { border: 1px solid #e2e8f0; padding: 10px 12px; text-align: left; font-size: 10.5pt; }
+    th { background-color: #f1f5f9; font-weight: bold; color: #0f172a; }
+    tr:nth-child(even) { background-color: #f8fafc; }
+</style>
+</head>
+<body>
+
+    <div class="center-section" style="margin-top: 100px;">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 20px;">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+        </svg>
+        <h1>ExamSys - User Guideline Book</h1>
+        <h2>Comprehensive Operation & Portal Management Manual</h2>
+    </div>
+
+    <div class="meta-box">
+        <div class="meta-item">Supervised by: Mr. Umair Waqas</div>
+        <div class="meta-item">Degree Program: Bachelor of Business and Information Systems</div>
+        <div class="meta-item">Session: 2022-26 (Morning/Evening)</div>
+        <div class="meta-item" style="margin-top: 15px;">Department of Business Administration</div>
+        <div class="meta-item">University of Sahiwal, Sahiwal</div>
+    </div>
+
+    <div style="text-align: center; font-weight: bold; margin-top: 100px; color: #64748b; font-size: 11pt;">
+        Document Version: 1.0.0<br/>
+        System Release: v2.4 (Dark Mode & Real-Time Grader Integrated)
+    </div>
+
+    <br clear="all" style="page-break-before: always;" />
+
+    <h3>Table of Contents</h3>
+    <ol>
+        <li>System Overview</li>
+        <li>Getting Started & Navigation</li>
+        <li>Administrator Control Panel Guide</li>
+        <li>Faculty/Teacher Portal Guide</li>
+        <li>Student Self-Service Portal Guide</li>
+        <li>Grading System Logic & Formulations</li>
+        <li>Troubleshooting & System Verification</li>
+    </ol>
+
+    <br clear="all" style="page-break-before: always;" />
+
+    <h3>1. System Overview</h3>
+    <p>The <strong>University Examination Management System (ExamSys)</strong> is a state-of-the-art web application developed to handle all phases of the academic evaluation process. It replaces archaic manual transcript preparation and grading sheets with a secure, responsive database-driven environment.</p>
+    <p>The system is built with <strong>Role-Based Access Control (RBAC)</strong>, providing custom views and features to three main user levels:
+        <ul>
+            <li><strong>Administrators</strong>: Manage core profiles (students, faculty), schedule exams, enroll courses, manage grading scale regulations, view audit trails, and publish final results.</li>
+            <li><strong>Teachers</strong>: View assigned courses, input internal (0-40) and external (0-60) marks, flag Unfair Means (UFM), and review class score statistics.</li>
+            <li><strong>Students</strong>: Access profile records, download exam hall tickets, view published semester results, and print official watermarked academic transcripts.</li>
+        </ul>
+    </p>
+
+    <h3>2. Getting Started & Navigation</h3>
+    <h4>System Access</h4>
+    <p>To run the application locally, ensure your Apache and MySQL modules are active inside the <strong>XAMPP Control Panel</strong>. Access the portal by navigating to the following address in your browser: <code>http://localhost/UniExamsys/</code></p>
+    
+    <div class="alert-box">
+        <div class="alert-title">💡 System Theme Syncing</div>
+        <div class="alert-content">
+            ExamSys includes a global Dark Mode toggle (🌙/☀️) located in the top bar of the dashboards and the landing page navbar. Clicking this toggle updates the page color themes, input boxes, tables, and Chart.js graphs dynamically on-the-fly. Your theme preference is preserved locally inside your browser storage.
+        </div>
+    </div>
+
+    <h4>Default Login Credentials</h4>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Portal URL Path</th>
+                    <th>Default Identifier / Roll No</th>
+                    <th>Default Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Administrator</strong></td>
+                    <td><code>/admin_login.php</code></td>
+                    <td><code>admin</code></td>
+                    <td><code>admin123</code></td>
+                </tr>
+                <tr>
+                    <td><strong>Teacher</strong></td>
+                    <td><code>/login.php?role=teacher</code></td>
+                    <td><code>T-BUS-01</code> (up to <code>T-BUS-20</code>)</td>
+                    <td><code>password123</code></td>
+                </tr>
+                <tr>
+                    <td><strong>Student</strong></td>
+                    <td><code>/login.php?role=student</code></td>
+                    <td><code>S-BUS-2026-01</code> (up to <code>S-BUS-2026-50</code>)</td>
+                    <td><code>password123</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br clear="all" style="page-break-before: always;" />
+
+    <h3>3. Administrator Control Panel Guide</h3>
+    <p>The Administrator is the master controller of ExamSys. Once logged in to the Admin Dashboard (<code>/admin/dashboard.php</code>), the administrator has access to the following modules from the sidebar menu:</p>
+    
+    <h4>A. Dashboard Analytics Overview</h4>
+    <p>The admin dashboard contains live statistics cards showing registered student counts, teacher counts, course numbers, total marks recorded, and published results. In addition, it renders two key interactive visual charts:
+        <ul>
+            <li><strong>Department Distribution</strong>: Displays student enrollment categorized by academic department.</li>
+            <li><strong>Performance Grade Curve</strong>: Displays the overall distribution of student letter grades.</li>
+        </ul>
+    </p>
+
+    <h4>B. Student & Teacher Profile Management</h4>
+    <p>To register new students or faculty members, click the **Students** or **Teachers** tabs. Admins can:
+        <ol>
+            <li>Create profile listings with specific details (Roll Numbers, Names, Program, Batch, Email, Contact).</li>
+            <li>Modify profile information.</li>
+            <li>Delete profiles. Deleting a profile automatically cascades to clean up corresponding database linkages.</li>
+        </ol>
+    </p>
+
+    <h4>C. Syllabus & Course Assignment</h4>
+    <p>Admins map courses to teachers using the **Assignments** module:
+        <ul>
+            <li>Click <strong>Assignments</strong>, select a teacher, select a course, and assign the Semester and Batch Year.</li>
+            <li>The system prevents duplicate assignments to protect system integrity.</li>
+        </ul>
+    </p>
+
+    <h4>D. Student Enrollment</h4>
+    <p>Before a teacher can enter grades, students must be enrolled in their semester courses:
+        <ul>
+            <li>Go to <strong>Enrollments</strong>, select a student, select their active semester courses, and hit Save.</li>
+        </ul>
+    </p>
+
+    <h4>E. Exam Sessions & Results Center</h4>
+    <p>To schedule an evaluation session (e.g., Midterm Fall 2026):
+        <ol>
+            <li>Go to <strong>Exams</strong>, fill in the exam name, type, active semester, batch, start and end dates, and click Save.</li>
+            <li>Once teachers have entered all marks for a session, navigate to the **Results** center.</li>
+            <li>Click <strong>Publish Results</strong> to make grades instantly available to students, or **Unpublish** to hide them for review.</li>
+            <li>Generate print-ready outputs: **Official Gazette** and **Tabulation Register (TR)**.</li>
+        </ol>
+    </p>
+
+    <h4>F. Security Audit Trail Logs</h4>
+    <p>To ensure system transparency, the Admin dashboard displays a real-time table of recent database operations showing the action description, targeted database table, IP address, user agent, and the administrator account that triggered it.</p>
+
+    <br clear="all" style="page-break-before: always;" />
+
+    <h3>4. Faculty/Teacher Portal Guide</h3>
+    <p>Teachers use their dedicated portal (<code>/teacher/dashboard.php</code>) to access assigned teaching schedules and input grades.</p>
+
+    <h4>A. Teaching Schedule & Averages Chart</h4>
+    <p>The teacher dashboard displays the courses assigned to them for the current semester and batch. An interactive bar chart shows the **Class Averages** across all courses they instruct, giving visual insight into student performance.</p>
+
+    <h4>B. Marks Entry with Real-Time Grader</h4>
+    <p>To enter student marks:
+        <ol>
+            <li>Go to <strong>Marks Entry</strong> in the sidebar menu.</li>
+            <li>Select the active **Exam Session** and the corresponding **Course**, then click **Load Students**.</li>
+            <li>The system loads the table of enrolled students. Enter **Internal Marks** (maximum 40) and **External Marks** (maximum 60).</li>
+            <li><strong>Real-Time Estimator</strong>: As you type the scores, the system dynamically calculates the total and looks up the grading scale in real time, displaying the estimated **Letter Grade** and **Grade Points** instantly in the adjacent columns.</li>
+            <li><strong>Unfair Means (UFM) Flag</strong>: If a student is caught using unfair means, tick the **Mark UFM** checkbox. The system instantly marks their status as "UFM" and sets their grade point to 0.00.</li>
+            <li>Click **Save All Marks** to commit the grades to the database.</li>
+        </ol>
+    </p>
+
+    <div class="alert-box">
+        <div class="alert-title">⚠️ Marks Bound Enforcement</div>
+        <div class="alert-content">
+            The marks entry form contains Javascript input limiters. If a teacher types an internal score greater than 40 or an external score greater than 60, the system displays an alert and automatically clamps the input back to the maximum allowed limit.
+        </div>
+    </div>
+
+    <br clear="all" style="page-break-before: always;" />
+
+    <h3>5. Student Self-Service Portal Guide</h3>
+    <p>Students use their roll numbers to access their academic status in the student portal (<code>/student/dashboard.php</code>).</p>
+
+    <h4>A. Academic Performance Progression</h4>
+    <p>The student dashboard displays the student's profile information alongside an interactive **Academic Performance Curve** line graph. This chart maps the student's SGPA semester-by-semester (from Sem 1 to Sem 6), providing a clear history of academic progression.</p>
+
+    <h4>B. Exam Hall Tickets</h4>
+    <p>Before exam sessions start:
+        <ol>
+            <li>Navigate to **Hall Ticket** in the sidebar.</li>
+            <li>Select the scheduled exam and view the digital hall ticket.</li>
+            <li>Click **Print Hall Ticket** to print or save the document as a PDF. The layout is optimized to fit standard A4 paper size.</li>
+        </ol>
+    </p>
+
+    <h4>C. Viewing Published Results</h4>
+    <p>To view results:
+        <ul>
+            <li>Click **Results** and select the exam session. If published by the admin, the page displays a detailed table of course codes, course titles, credits, internal/external breakdowns, total scores, letter grades, and points.</li>
+            <li>The dynamic SGPA for the selected semester is shown at the bottom of the table.</li>
+        </ul>
+    </p>
+
+    <h4>D. Printing Watermarked Academic Transcripts</h4>
+    <p>For graduation or official verification, students can print their multi-semester transcript:
+        <ol>
+            <li>Go to **Transcript** in the sidebar.</li>
+            <li>The portal loads all historical published results categorized by semester, alongside cumulative total credits and the final **CGPA**.</li>
+            <li>The screen displays a security background watermark reading **"OFFICIAL TRANSCRIPT"**.</li>
+            <li>Click **Print Transcript** to print or export as PDF. Print styles automatically suppress the dashboard menus and force a high-quality black-and-white theme suited for official use.</li>
+        </ol>
+    </p>
+
+    <br clear="all" style="page-break-before: always;" />
+
+    <h3>6. Grading System Logic & Formulations</h3>
+    <p>ExamSys uses a database-driven lookup to compute final letter grades. If the database scale configuration is empty, the system defaults to the following standardized grading rules:</p>
+
+    <h4>Grading Scale Thresholds</h4>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Total Percentage Score Range</th>
+                    <th>Letter Grade</th>
+                    <th>Grade Point Value</th>
+                    <th>Performance Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>90% to 100%</td>
+                    <td><strong>A+</strong></td>
+                    <td>4.00</td>
+                    <td>Outstanding</td>
+                </tr>
+                <tr>
+                    <td>85% to 89.9%</td>
+                    <td><strong>A</strong></td>
+                    <td>3.67</td>
+                    <td>Excellent</td>
+                </tr>
+                <tr>
+                    <td>80% to 84.9%</td>
+                    <td><strong>A-</strong></td>
+                    <td>3.33</td>
+                    <td>Very Good</td>
+                </tr>
+                <tr>
+                    <td>75% to 79.9%</td>
+                    <td><strong>B+</strong></td>
+                    <td>3.00</td>
+                    <td>Good</td>
+                </tr>
+                <tr>
+                    <td>70% to 74.9%</td>
+                    <td><strong>B</strong></td>
+                    <td>2.67</td>
+                    <td>Average</td>
+                </tr>
+                <tr>
+                    <td>65% to 69.9%</td>
+                    <td><strong>B-</strong></td>
+                    <td>2.33</td>
+                    <td>Fair</td>
+                </tr>
+                <tr>
+                    <td>60% to 64.9%</td>
+                    <td><strong>C+</strong></td>
+                    <td>2.00</td>
+                    <td>Satisfactory</td>
+                </tr>
+                <tr>
+                    <td>55% to 59.9%</td>
+                    <td><strong>C</strong></td>
+                    <td>1.67</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>50% to 54.9%</td>
+                    <td><strong>C-</strong></td>
+                    <td>1.33</td>
+                    <td>Marginal</td>
+                </tr>
+                <tr>
+                    <td>Below 50%</td>
+                    <td><strong>F</strong></td>
+                    <td>0.00</td>
+                    <td>Fail</td>
+                </tr>
+                <tr>
+                    <td>Unfair Means (Flagged)</td>
+                    <td><strong>UFM</strong></td>
+                    <td>0.00</td>
+                    <td>Disqualified</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>Mathematical Formulations</h4>
+    <p><strong>A. Course Total Marks:</strong><br/>
+        \(Total = Internal + External\)<br/>
+        Where Internal is capped at 40.00 and External at 60.00.
+    </p>
+
+    <p><strong>B. Semester Grade Point Average (SGPA):</strong><br/>
+        The SGPA is computed by dividing the sum of quality points earned by the total credits registered in a semester:
+        \[SGPA = \frac{\sum (Credits \times GradePoint)}{\sum Credits}\]
+    </p>
+
+    <p><strong>C. Cumulative Grade Point Average (CGPA):</strong><br/>
+        The CGPA is computed by dividing the total cumulative quality points by the total cumulative academic credits registered across all semesters:
+        \[CGPA = \frac{\sum_{i=1}^{n} (Credits_i \times GradePoint_i)}{\sum_{i=1}^{n} Credits_i}\]
+    </p>
+
+    <br clear="all" style="page-break-before: always;" />
+
+    <h3>7. Troubleshooting & System Verification</h3>
+    
+    <h4>Common Issues & Resolutions</h4>
+    <ul>
+        <li><strong>Dashboard charts are blank or do not load</strong>: Ensure your system is connected to the internet to fetch the Chart.js script from the CDN. If offline, the charts fall back to display standard styled tabular logs.</li>
+        <li><strong>Teacher cannot enter marks for a course</strong>: Check if the course is assigned to the teacher by the administrator for the current semester and batch. Confirm that the student is also enrolled in that semester's course.</li>
+        <li><strong>Watermark does not display in printed transcripts</strong>: Make sure that "Background graphics" is enabled in your browser's Print dialog settings.</li>
+        <li><strong>UFM marks are truncated to "UF"</strong>: The database schema columns must support VARCHAR(5) for grades. Ensure you are using the updated database structure.</li>
+    </ul>
+
+    <h4>Database Status Verification</h4>
+    <p>To verify that all system tables are intact, open <code>http://localhost/UniExamsys/db_check.php</code> in your browser. It runs a diagnostic query displaying all tables and confirms the presence of columns required for system operations.</p>
+
+</body>
+</html>
